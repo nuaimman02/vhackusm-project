@@ -1,22 +1,16 @@
-import '/flutter_flow/flutter_flow_animations.dart';
-import '/flutter_flow/flutter_flow_charts.dart';
-import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/form_field_controller.dart';
-import '/flutter_flow/random_data_util.dart' as random_data;
+import 'package:flutter_application_1/models/debt_prediction_model.dart';
+
+import 'package:flutterflow_ui/flutterflow_ui.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-import 'debt_prediction_model.dart';
-export 'debt_prediction_model.dart';
+export 'package:flutter_application_1/models/debt_prediction_model.dart';
 
 class DebtPredictionWidget extends StatefulWidget {
   const DebtPredictionWidget({super.key});
@@ -78,6 +72,11 @@ class _DebtPredictionWidgetState extends State<DebtPredictionWidget>
     super.initState();
     _model = createModel(context, () => DebtPredictionModel());
 
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      context.pushNamed('MainMenu');
+    });
+
     _model.textController ??= TextEditingController();
     _model.textFieldFocusNode ??= FocusNode();
 
@@ -119,7 +118,7 @@ class _DebtPredictionWidgetState extends State<DebtPredictionWidget>
               size: 30,
             ),
             onPressed: () async {
-              context.pop();
+              context.pushNamed('MainMenu');
             },
           ),
           title: Text(
@@ -844,9 +843,7 @@ class _DebtPredictionWidgetState extends State<DebtPredictionWidget>
                                         isOverButton: true,
                                         isSearchable: false,
                                         isMultiSelect: false,
-                                      ),
-                                      Row(
-                                        mainAxisSize: MainAxisSize.max,
+                                      ) mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Text(
                                             'Enter your OPR Predicted:',

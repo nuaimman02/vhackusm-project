@@ -1,15 +1,14 @@
-import '/flutter_flow/flutter_flow_choice_chips.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/form_field_controller.dart';
+// ignore_for_file: unused_import
+
+import 'package:flutter_application_1/models/education_model.dart';
+
+import 'package:flutterflow_ui/flutterflow_ui.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-import 'education_model.dart';
-export 'education_model.dart';
+export 'package:flutter_application_1/models/education_model.dart';
 
 class EducationWidget extends StatefulWidget {
   const EducationWidget({super.key});
@@ -51,35 +50,23 @@ class _EducationWidgetState extends State<EducationWidget> {
         appBar: AppBar(
           backgroundColor: Colors.white,
           automaticallyImplyLeading: false,
-          leading: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(12, 6, 0, 6),
-            child: Container(
-              width: 44,
-              height: 44,
-              decoration: BoxDecoration(
-                color: Color(0x4D9489F5),
-                shape: BoxShape.circle,
-                border: Border.all(
-                  color: Color(0xFF6F61EF),
-                  width: 2,
-                ),
-              ),
-              child: Padding(
-                padding: EdgeInsets.all(2),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(50),
-                  child: Image.network(
-                    'https://images.unsplash.com/photo-1624561172888-ac93c696e10c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjJ8fHVzZXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
-                    width: 300,
-                    height: 200,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
+          leading: FlutterFlowIconButton(
+            borderColor: Colors.transparent,
+            borderRadius: 20,
+            borderWidth: 1,
+            buttonSize: 40,
+            fillColor: Colors.transparent,
+            icon: Icon(
+              Icons.arrow_back,
+              color: FlutterFlowTheme.of(context).primaryText,
+              size: 24,
             ),
+            onPressed: () async {
+              context.pushNamed('MainMenu');
+            },
           ),
           title: Text(
-            'Hey John',
+            'Education',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Outfit',
                   color: Color(0xFF15161E),
@@ -248,7 +235,7 @@ class _EducationWidgetState extends State<EducationWidget> {
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(6),
                                         child: Image.network(
-                                          'https://i.ytimg.com/vi/2mOg7hCeGUw/sddefault.jpg',
+                                          '',
                                           width: 120,
                                           height: 120,
                                           fit: BoxFit.contain,
@@ -406,7 +393,7 @@ class _EducationWidgetState extends State<EducationWidget> {
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(6),
                                         child: Image.network(
-                                          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6Gy8bOEo5OkmqLGVMP1RSzYHvgT8Xvov0eg&usqp=CAU',
+                                          '',
                                           width: 120,
                                           height: 120,
                                           fit: BoxFit.cover,
@@ -597,7 +584,7 @@ class _EducationWidgetState extends State<EducationWidget> {
                                 FormFieldController<List<String>>(
                               ['For You'],
                             ),
-                            wrapped: true,
+                            //wrapped: true,
                           ),
                         ),
                       ]
@@ -656,7 +643,7 @@ class _EducationWidgetState extends State<EducationWidget> {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
                                   child: Image.network(
-                                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnTr9TPqESWDfOE1r9qrKrRFY1v36OvfUl_A&usqp=CAU',
+                                    '',
                                     width: 120,
                                     height: 120,
                                     fit: BoxFit.cover,
@@ -810,7 +797,7 @@ class _EducationWidgetState extends State<EducationWidget> {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
                                   child: Image.network(
-                                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI9vLy0rnkjzh6D5HTWgOgpu5y3FDwu6cKqA&usqp=CAU',
+                                    '',
                                     width: 120,
                                     height: 120,
                                     fit: BoxFit.cover,
@@ -964,7 +951,7 @@ class _EducationWidgetState extends State<EducationWidget> {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
                                   child: Image.network(
-                                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDiv5fOgzn4Hk2lzBtvN63aHk4BjnixqoLMA&usqp=CAU',
+                                    '',
                                     width: 120,
                                     height: 120,
                                     fit: BoxFit.cover,

@@ -1,15 +1,15 @@
-import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/form_field_controller.dart';
+// ignore_for_file: unused_import
+
+import 'package:flutter_application_1/models/register_model.dart';
+
+import 'package:flutterflow_ui/flutterflow_ui.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-import 'register_model.dart';
-export 'register_model.dart';
+
+export 'package:flutter_application_1/models/register_model.dart';
 
 class RegisterWidget extends StatefulWidget {
   const RegisterWidget({super.key});
@@ -69,7 +69,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
               size: 24,
             ),
             onPressed: () async {
-              context.safePop();
+              context.pushNamed('Login');
             },
           ),
           title: Text(
@@ -264,43 +264,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                               .asValidator(context),
                         ),
                       ),
-                      FlutterFlowDropDown<String>(
-                        controller: _model.dropDownValueController ??=
-                            FormFieldController<String>(null),
-                        options: [
-                          'Below 1000',
-                          '1001-2000',
-                          '2001-3000',
-                          '3001-4000',
-                          '4001-5000',
-                          'Above 5000'
-                        ],
-                        onChanged: (val) =>
-                            setState(() => _model.dropDownValue = val),
-                        width: 300,
-                        height: 56,
-                        textStyle: FlutterFlowTheme.of(context).bodyMedium,
-                        hintText: 'Please select...',
-                        icon: Icon(
-                          Icons.keyboard_arrow_down_rounded,
-                          color: FlutterFlowTheme.of(context).secondaryText,
-                          size: 24,
-                        ),
-                        fillColor:
-                            FlutterFlowTheme.of(context).secondaryBackground,
-                        elevation: 2,
-                        borderColor: FlutterFlowTheme.of(context).alternate,
-                        borderWidth: 2,
-                        borderRadius: 8,
-                        margin: EdgeInsetsDirectional.fromSTEB(16, 4, 16, 4),
-                        hidesUnderline: true,
-                        isOverButton: true,
-                        isSearchable: false,
-                        isMultiSelect: false,
-                        labelText: 'Monthly Income',
-                        labelTextStyle:
-                            FlutterFlowTheme.of(context).labelMedium,
-                      ),
+                      widget,
                       Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,

@@ -1,13 +1,15 @@
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+// ignore_for_file: unused_import
+
+import 'package:flutter_application_1/models/debt_calculator_model.dart';
+
+import 'package:flutterflow_ui/flutterflow_ui.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-import 'debt_calculator_model.dart';
-export 'debt_calculator_model.dart';
+export 'package:flutter_application_1/models/debt_calculator_model.dart';
 
 class DebtCalculatorWidget extends StatefulWidget {
   const DebtCalculatorWidget({super.key});
@@ -25,6 +27,11 @@ class _DebtCalculatorWidgetState extends State<DebtCalculatorWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => DebtCalculatorModel());
+
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      context.pushNamed('MainMenu');
+    });
 
     _model.textController1 ??= TextEditingController();
     _model.textFieldFocusNode1 ??= FocusNode();

@@ -1,14 +1,15 @@
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+// ignore_for_file: unused_import
+
+import 'package:flutter_application_1/models/setting_model.dart';
+
+import 'package:flutterflow_ui/flutterflow_ui.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-import 'setting_model.dart';
-export 'setting_model.dart';
+export 'package:flutter_application_1/models/setting_model.dart';
 
 class SettingWidget extends StatefulWidget {
   const SettingWidget({super.key});

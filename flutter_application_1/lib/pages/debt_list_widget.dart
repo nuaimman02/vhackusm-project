@@ -1,16 +1,14 @@
-import '/flutter_flow/flutter_flow_choice_chips.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/form_field_controller.dart';
+// ignore_for_file: unused_import
+
+import 'package:flutter_application_1/models/debt_list_model.dart';
+
+import 'package:flutterflow_ui/flutterflow_ui.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-import 'debt_list_model.dart';
-export 'debt_list_model.dart';
+export 'package:flutter_application_1/models/debt_list_model.dart';
 
 class DebtListWidget extends StatefulWidget {
   const DebtListWidget({super.key});
@@ -52,6 +50,21 @@ class _DebtListWidgetState extends State<DebtListWidget> {
         appBar: AppBar(
           backgroundColor: Colors.white,
           automaticallyImplyLeading: false,
+          leading: FlutterFlowIconButton(
+            borderColor: Colors.transparent,
+            borderRadius: 20,
+            borderWidth: 1,
+            buttonSize: 40,
+            fillColor: Colors.transparent,
+            icon: Icon(
+              Icons.arrow_back,
+              color: FlutterFlowTheme.of(context).primaryText,
+              size: 24,
+            ),
+            onPressed: () async {
+              context.pushNamed('MainMenu');
+            },
+          ),
           title: Text(
             'All Debt',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -93,8 +106,8 @@ class _DebtListWidgetState extends State<DebtListWidget> {
                   color: FlutterFlowTheme.of(context).primaryText,
                   size: 24,
                 ),
-                onPressed: () {
-                  print('IconButton pressed ...');
+                onPressed: () async {
+                  context.pushNamed('AddDebt');
                 },
               ),
             ),

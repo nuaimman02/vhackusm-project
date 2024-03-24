@@ -1,13 +1,15 @@
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+// ignore_for_file: unused_import
+
+import 'package:flutter_application_1/models/main_menu_model.dart';
+
+import 'package:flutterflow_ui/flutterflow_ui.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-import 'main_menu_model.dart';
-export 'main_menu_model.dart';
+
+export 'package:flutter_application_1/models/main_menu_model.dart';
 
 class MainMenuWidget extends StatefulWidget {
   const MainMenuWidget({super.key});
@@ -57,7 +59,7 @@ class _MainMenuWidgetState extends State<MainMenuWidget> {
               size: 30,
             ),
             onPressed: () async {
-              context.pop();
+              context.pushNamed('Dashboardtemp');
             },
           ),
           title: Text(

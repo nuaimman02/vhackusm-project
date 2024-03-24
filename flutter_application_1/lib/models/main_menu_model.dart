@@ -1,8 +1,7 @@
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'main_menu_widget.dart' show MainMenuWidget;
+// ignore_for_file: unused_import
+
+import 'package:flutterflow_ui/flutterflow_ui.dart';
+import 'package:flutter_application_1/pages/main_menu_widget.dart' show MainMenuWidget;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';

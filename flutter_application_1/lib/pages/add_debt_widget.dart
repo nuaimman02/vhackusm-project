@@ -1,17 +1,15 @@
-import '/flutter_flow/flutter_flow_choice_chips.dart';
-import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/form_field_controller.dart';
+// ignore_for_file: unused_import
+
+import 'package:flutter_application_1/models/add_debt_model.dart';
+
+import 'package:flutterflow_ui/flutterflow_ui.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:provider/provider.dart';
 
-import 'add_debt_model.dart';
-export 'add_debt_model.dart';
+export 'package:flutter_application_1/models/add_debt_model.dart';
 
 class AddDebtWidget extends StatefulWidget {
   const AddDebtWidget({super.key});
@@ -80,7 +78,7 @@ class _AddDebtWidgetState extends State<AddDebtWidget> {
               size: 30,
             ),
             onPressed: () async {
-              context.pop();
+              context.pushNamed('MainMenu');
             },
           ),
           title: Text(
@@ -553,66 +551,70 @@ class _AddDebtWidgetState extends State<AddDebtWidget> {
                                           fontWeight: FontWeight.w500,
                                         ),
                                   ),
-                                  FlutterFlowDropDown<String>(
-                                    controller:
-                                        _model.dropDownValueController ??=
-                                            FormFieldController<String>(null),
-                                    options: [
-                                      'House Loan',
-                                      'Car Loan',
-                                      'Education Loan',
-                                      'Personal Loan',
-                                      'Other'
-                                    ],
-                                    onChanged: (val) => setState(
-                                        () => _model.dropDownValue = val),
-                                    width: double.infinity,
-                                    height: 52,
-                                    searchHintTextStyle:
-                                        FlutterFlowTheme.of(context)
-                                            .labelMedium
-                                            .override(
-                                              fontFamily: 'Outfit',
-                                              color: Color(0xFF606A85),
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                    searchTextStyle:
-                                        FlutterFlowTheme.of(context)
-                                            .bodyMedium
+                                  widget(
+                                    child: widget(
+                                      child: FlutterFlowDropDown<String>(
+                                        controller:
+                                            _model.dropDownValueController ??=
+                                                FormFieldController<String>(null),
+                                        options: [
+                                          'House Loan',
+                                          'Car Loan',
+                                          'Education Loan',
+                                          'Personal Loan',
+                                          'Other'
+                                        ],
+                                        onChanged: (val) => setState(
+                                            () => _model.dropDownValue = val),
+                                        width: double.infinity,
+                                        height: 52,
+                                        //searchHintTextStyle:
+                                            FlutterFlowTheme.of(context)
+                                                .labelMedium
+                                                .override(
+                                                  fontFamily: 'Outfit',
+                                                  color: Color(0xFF606A85),
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                        //searchTextStyle:
+                                            FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily: 'Figtree',
+                                                  color: Color(0xFF6F61EF),
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.w600,
+                                                ),
+                                        textStyle: FlutterFlowTheme.of(context)
+                                            .bodyLarge
                                             .override(
                                               fontFamily: 'Figtree',
-                                              color: Color(0xFF6F61EF),
-                                              fontSize: 14,
+                                              color: Color(0xFF15161E),
+                                              fontSize: 16,
                                               fontWeight: FontWeight.w600,
                                             ),
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .bodyLarge
-                                        .override(
-                                          fontFamily: 'Figtree',
-                                          color: Color(0xFF15161E),
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w600,
+                                        hintText: 'Select one...',
+                                        //searchHintText: 'Search for an item...',
+                                        //searchCursorColor: Color(0xFF6F61EF),
+                                        icon: Icon(
+                                          Icons.keyboard_arrow_down_rounded,
+                                          color: Color(0xFF606A85),
+                                          size: 24,
                                         ),
-                                    hintText: 'Select one...',
-                                    searchHintText: 'Search for an item...',
-                                    searchCursorColor: Color(0xFF6F61EF),
-                                    icon: Icon(
-                                      Icons.keyboard_arrow_down_rounded,
-                                      color: Color(0xFF606A85),
-                                      size: 24,
+                                        fillColor: Colors.white,
+                                        elevation: 2,
+                                        borderColor: Color(0xFFE5E7EB),
+                                        borderWidth: 2,
+                                        borderRadius: 12,
+                                        margin: EdgeInsetsDirectional.fromSTEB(
+                                            12, 4, 8, 4),
+                                        hidesUnderline: true,
+                                        //isOverButton: true,
+                                        //isSearchable: true,
+                                        //isMultiSelect: false,
+                                      ),
                                     ),
-                                    fillColor: Colors.white,
-                                    elevation: 2,
-                                    borderColor: Color(0xFFE5E7EB),
-                                    borderWidth: 2,
-                                    borderRadius: 12,
-                                    margin: EdgeInsetsDirectional.fromSTEB(
-                                        12, 4, 8, 4),
-                                    hidesUnderline: true,
-                                    isOverButton: true,
-                                    isSearchable: true,
-                                    isMultiSelect: false,
                                   ),
                                   Text(
                                     'Type of interest',
@@ -675,7 +677,7 @@ class _AddDebtWidgetState extends State<AddDebtWidget> {
                                             FormFieldController<List<String>>(
                                       [],
                                     ),
-                                    wrapped: true,
+                                    //wrapped: true,
                                   ),
                                   TextFormField(
                                     controller: _model.descriptionController,

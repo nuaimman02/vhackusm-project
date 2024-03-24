@@ -1,19 +1,19 @@
-import '/flutter_flow/flutter_flow_animations.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+// ignore_for_file: unused_import
+
+import 'package:flutter_application_1/models/dashboardtemp_model.dart';
+
+import 'package:flutterflow_ui/flutterflow_ui.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 
-import 'dashboardtemp_model.dart';
-export 'dashboardtemp_model.dart';
+export 'package:flutter_application_1/models/dashboardtemp_model.dart';
 
 class DashboardtempWidget extends StatefulWidget {
   const DashboardtempWidget({super.key});
@@ -683,8 +683,7 @@ class _DashboardtempWidgetState extends State<DashboardtempWidget>
                                                 Duration(milliseconds: 500),
                                             fadeOutDuration:
                                                 Duration(milliseconds: 500),
-                                            imageUrl:
-                                                'https://images.unsplash.com/photo-1624561172888-ac93c696e10c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjJ8fHVzZXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+                                            imageUrl: '',
                                             width: 44,
                                             height: 44,
                                             fit: BoxFit.cover,
@@ -3853,6 +3852,8 @@ class _DashboardtempWidgetState extends State<DashboardtempWidget>
                                                   16, 0, 16, 0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.end,
                                             children: [
                                               if (responsiveVisibility(
                                                 context: context,
@@ -3880,7 +3881,7 @@ class _DashboardtempWidgetState extends State<DashboardtempWidget>
                                               Expanded(
                                                 flex: 4,
                                                 child: Text(
-                                                  'Assigned User',
+                                                  'Debt List',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelSmall
@@ -3937,24 +3938,29 @@ class _DashboardtempWidgetState extends State<DashboardtempWidget>
                                               ),
                                               Expanded(
                                                 flex: 1,
-                                                child: Text(
-                                                  'Actions',
-                                                  textAlign: TextAlign.end,
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .labelSmall
-                                                      .override(
-                                                        fontFamily:
-                                                            'Plus Jakarta Sans',
-                                                        color:
-                                                            Color(0xFF606A85),
-                                                        fontSize: 12,
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                      ),
+                                                child: Align(
+                                                  alignment:
+                                                      AlignmentDirectional(
+                                                          0, 0),
+                                                  child: Text(
+                                                    'Action',
+                                                    textAlign: TextAlign.end,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .labelSmall
+                                                        .override(
+                                                          fontFamily:
+                                                              'Plus Jakarta Sans',
+                                                          color:
+                                                              Color(0xFF606A85),
+                                                          fontSize: 12,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
+                                                  ),
                                                 ),
                                               ),
-                                            ],
+                                            ].divide(SizedBox(width: 0)),
                                           ),
                                         ),
                                       ),
@@ -4037,7 +4043,7 @@ class _DashboardtempWidgetState extends State<DashboardtempWidget>
                                                                           40),
                                                               child:
                                                                   Image.network(
-                                                                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2ixzvDvLGoPJUy-Pyb67moGuFTrRfQOnHkw&usqp=CAU',
+                                                                '',
                                                                 width: 32,
                                                                 height: 32,
                                                                 fit: BoxFit
@@ -4297,7 +4303,7 @@ class _DashboardtempWidgetState extends State<DashboardtempWidget>
                                                                           40),
                                                               child:
                                                                   Image.network(
-                                                                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwh7p7yYjoWyWJIa-ihgRdQd0HDaCqR4-CHw&usqp=CAU',
+                                                                '',
                                                                 width: 32,
                                                                 height: 32,
                                                                 fit: BoxFit
@@ -4557,7 +4563,7 @@ class _DashboardtempWidgetState extends State<DashboardtempWidget>
                                                                           40),
                                                               child:
                                                                   Image.network(
-                                                                'https://www.personal-loan.my/wp-content/uploads/2013/12/ptptn-logo1-300x289.jpg',
+                                                                '',
                                                                 width: 32,
                                                                 height: 32,
                                                                 fit: BoxFit
@@ -4817,7 +4823,7 @@ class _DashboardtempWidgetState extends State<DashboardtempWidget>
                                                                           40),
                                                               child:
                                                                   Image.network(
-                                                                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStJ8ZRkRMZwEhotJov4SIi60kZsheYH88C3Q&usqp=CAU',
+                                                                '',
                                                                 width: 32,
                                                                 height: 32,
                                                                 fit: BoxFit
@@ -5073,7 +5079,7 @@ class _DashboardtempWidgetState extends State<DashboardtempWidget>
                                                                           40),
                                                               child:
                                                                   Image.network(
-                                                                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQou_b1CKddQ6RbB3h78sJF9O76rD1r3SwpFA&usqp=CAU',
+                                                                '',
                                                                 width: 32,
                                                                 height: 32,
                                                                 fit: BoxFit

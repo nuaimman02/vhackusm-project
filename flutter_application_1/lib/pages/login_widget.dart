@@ -1,12 +1,15 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+// ignore_for_file: unused_import
+
+import 'package:flutter_application_1/models/login_model.dart';
+
+import 'package:flutterflow_ui/flutterflow_ui.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-import 'login_model.dart';
-export 'login_model.dart';
+
+export 'package:flutter_application_1/models/login_model.dart';
 
 class LoginWidget extends StatefulWidget {
   const LoginWidget({super.key});
