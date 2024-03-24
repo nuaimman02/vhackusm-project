@@ -6,7 +6,7 @@ Group Name: Varsity-Hack
 <br> Group Members: 
 1. Muhammad Amin Safri
 2. Hariz Azhad Dhiyauddin Roslan
-3. Wan Muhammad Izzuddin Wan Muhammad Ibrisam
+3. Wan Muhamad Izzuddin Wan Muhamad Ibrisam
 4. Nu'aimman Dinie Roslan Ismani
 
 ## Project Details
