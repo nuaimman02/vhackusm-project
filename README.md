@@ -3,7 +3,7 @@ This project was developed by our team that consists of four students from Bache
 
 ## Group Details
 Group Name: Varsity-Hack
-Group Members: 
+<br> Group Members: 
 1. Muhammad Amin Safri
 2. Hariz Azhad Dhiyauddin Roslan
 3. Wan Muhammad Izzuddin Wan Muhammad Ibrisam
