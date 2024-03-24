@@ -1,8 +1,8 @@
-# vhackusm-project
+# debtwize-vhackusm-project
 This project was developed by our team that consists of four students from Bachelor of Computer Science, Universiti Putra Malaysia. This repository is used for version control of this project development with our team in this USM Hackathon Event.
 
 ## Group Details
-Group Members: 
+Group Members: EXByte
 1. Muhammad Amin Safri
 2. Hariz Azhad Dhiyauddin Roslan
 3. Wan Muhamad Izzuddin Wan Muhamad Ibrisam
